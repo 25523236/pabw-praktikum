@@ -14,4 +14,4 @@ Repo ini memuat pekerjaan mata kuliah Pengembangan Aplikasi Berbasis Web.
 - **Radius & Bayangan:** Radius `0.75rem`, Bayangan `0 4px 18px rgba(194, 65, 108, 0.08)`
 
 ## Catatan Penggunaan AI
-AI digunakan untuk membantu memahami konsep CSS Design Token dua lapis dan membimbing pengisian worksheet. Seluruh struktur dan kode dikerjakan mandiri.
+AI digunakan untuk membantu memahami konsep CSS Design. 
