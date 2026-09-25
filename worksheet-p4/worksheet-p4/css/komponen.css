@@ -1,0 +1,136 @@
+/* ==========================================================================
+   KOMPONEN.CSS — ELEMEN SPESIFIK & TABEL
+   ========================================================================== */
+
+/* 1. AKSESIBILITAS & VALIDASI FORM */
+input:focus-visible, textarea:focus-visible, button:focus-visible {
+  outline: 2px solid var(--fokus-ring);
+  outline-offset: 2px;
+}
+
+input:user-invalid, textarea:user-invalid {
+  border: 2px solid var(--warna-bahaya);
+}
+
+.pesan-galat {
+  display: none;
+  color: var(--warna-bahaya);
+  font-size: var(--fs-sm);
+  margin-top: 0.25rem;
+}
+
+p:has(input:user-invalid) .pesan-galat {
+  display: block;
+}
+
+/* 2. DAFTAR & BULLET */
+#karya ul, .karya ul { list-style-type: "🌸 "; padding-left: 1.5rem; }
+#karya li, .karya li { margin-bottom: 0.6rem; padding-left: 0.3rem; }
+
+#akademik ol, .akademik ol { padding-left: 1.8rem; margin-top: 0.75rem; }
+#akademik li, .akademik li { margin-bottom: 0.75rem; line-height: 1.6; }
+
+/* 3. TABEL KEGIATAN (HEADER PINK, DATA NETRAL) */
+table, .tabel-kegiatan {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+th, td {
+  padding: 0.85rem 1rem;
+  text-align: left;
+  vertical-align: middle;
+}
+
+/* Header Utama Paling Atas */
+thead th, thead td, table > tr:first-child th {
+  color: #db2777;
+  font-weight: 700;
+  border-bottom: 2px solid #db2777;
+}
+
+/* Semua Isi Baris Data */
+tbody tr th, tbody tr td, 
+table > tr:not(:first-child) th, table > tr:not(:first-child) td {
+  color: var(--teks-utama);
+  font-weight: 400;
+  border-bottom: 1px solid #fbcfe8;
+}
+
+/* 4. KETERAMPILAN (DEFINITION LIST) */
+dl { margin-top: 0.75rem; }
+dt {
+  font-weight: 700;
+  color: #db2777;
+  font-size: 1.05rem;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+dt::before { content: "🌸"; font-size: 0.9rem; }
+
+dd {
+  margin-left: 0;
+  margin-top: 0.25rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px dashed #f9a8d4;
+  color: var(--teks-utama);
+  line-height: 1.5;
+}
+dd:last-of-type { border-bottom: none; }
+
+/* 5. FORMULIR INPUT */
+fieldset {
+  border: 2px solid #f9a8d4;
+  border-radius: 0.8rem;
+  padding: 1.25rem;
+  background-color: #fff5f7;
+}
+
+legend { font-weight: 700; color: #db2777; padding: 0 0.6rem; font-size: 1.1rem; }
+label { display: block; font-weight: 600; color: var(--teks-utama); margin: 0.8rem 0 0.3rem; }
+
+input[type="text"], input[type="email"], textarea {
+  background-color: #ffffff;
+  color: #2d1a24;
+  border: 1.5px solid #f9a8d4;
+  border-radius: 0.5rem;
+  padding: 0.65rem 0.85rem;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 0.95rem;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #db2777;
+  box-shadow: 0 0 0 3px rgba(219, 39, 119, 0.15);
+}
+
+/* 6. OVERRIDE DONGKER (MODE GELAP) */
+:root:has(#tema:checked) thead th,
+:root:has(#tema:checked) table > tr:first-child th {
+  color: #f472b6 !important;
+  border-bottom-color: #f472b6 !important;
+}
+
+:root:has(#tema:checked) tbody tr th,
+:root:has(#tema:checked) tbody tr td,
+:root:has(#tema:checked) table > tr:not(:first-child) th,
+:root:has(#tema:checked) table > tr:not(:first-child) td {
+  color: #f1f5f9 !important;
+  border-bottom: 1px solid #334155 !important;
+}
+
+:root:has(#tema:checked) tbody tr *,
+:root:has(#tema:checked) table > tr:not(:first-child) * {
+  color: inherit !important;
+  font-weight: inherit !important;
+}
+
+:root:has(#tema:checked) fieldset { background-color: #1e293b; border-color: #334155; }
+:root:has(#tema:checked) legend, :root:has(#tema:checked) dt { color: #f472b6; }
+:root:has(#tema:checked) label { color: #f1f5f9; }
+:root:has(#tema:checked) dd { border-bottom-color: #334155; color: #cbd5e1; }

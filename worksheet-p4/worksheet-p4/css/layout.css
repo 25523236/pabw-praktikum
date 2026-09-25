@@ -1,0 +1,90 @@
+/* ==========================================================================
+   LAYOUT.CSS — CARD-BASED LAYOUT
+   ========================================================================== */
+
+body {
+  max-width: 820px;
+  margin-inline: auto;
+}
+
+/* Header & Section Cards */
+.kepala, section {
+  background-color: var(--bg-kartu);
+  padding: 1.5rem;
+  border-radius: var(--radius-std);
+  border: 1px solid var(--bingkai);
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.kepala {
+  padding: 1.75rem;
+}
+
+.kepala nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Section Tentang Saya */
+#tentang {
+  align-items: center;
+  gap: 1.25rem;
+}
+
+#tentang .foto {
+  width: 100%;
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+#tentang p {
+  width: 100%;
+  margin: 0;
+  text-align: left;
+}
+
+.foto img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: var(--radius-std);
+}
+
+/* Form Layout */
+form fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.25rem;
+  border: 1px solid var(--bingkai);
+  border-radius: var(--radius-std);
+  background-color: var(--bg-aksen);
+}
+
+form p {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin: 0;
+}
+
+.kaki {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: var(--fs-sm);
+  color: var(--teks-sekunder);
+}
