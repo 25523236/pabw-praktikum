@@ -1,34 +1,22 @@
-# PABW — Diah Putri Pertiwi — 25523236
+# Praktikum P05 — Layout & Styling Halaman Profil Saya
 
-Repo ini memuat pekerjaan mata kuliah Pengembangan Aplikasi Berbasis Web.
+Pengerjaan lanjutan dari P04 dengan penambahan struktur semantik baru, tata letak CSS Grid/Flexbox, komponen form, serta dukungan tema gelap.
 
-## Pertemuan 4 — Halaman Profil Saya
+## Isi Paket
 
-- **Arah Visual:** Soft dan playful (Tema Sakura Pink & Mode Gelap Dongker)
-- **Warna Utama:** Pink Sakura (`#C2416C` / `--clr-sakura-primary`)
-- **Warna Netral:** 
-  - Terang: Soft Pink (`#FFF5F7`) dan Putih (`#FFFFFF`)
-  - Gelap: Biru Dongker (`#0F172A` untuk latar & `#1E293B` untuk kartu)
-- **Ukuran Huruf:** Isi `1rem`, Judul Bagian `1.5rem`, Judul Utama `2.25rem`
-- **Jarak Dasar:** Spasi standar `1rem`, jarak antar bagian `1.5rem`
-- **Radius & Bayangan:** Radius `0.75rem`, Bayangan `0 4px 18px rgba(194, 65, 108, 0.08)`
+- `profil.html` — Halaman profil utama yang sudah dilengkapi 3 elemen semantik baru.
+- `css/` — Berisi 5 file CSS terpisah (`tokens.css`, `base.css`, `layout.css`, `komponen.css`, `tema.css`).
+- `media/` — Berisi foto profil.
 
-- ## Design token halaman profil
+## Deskripsi Tiga Bagian Tambahan
 
-- **Berkas gaya yang dibuat:** `tokens.css`, `base.css`, `layout.css`, `komponen.css`, `tema.css`
-- **Warna utama:** `#C2416C` (Sakura Pink), dipilih karena memberikan identitas visual yang lembut, hangat, serta mudah dipadukan dengan mode gelap (dongker) tanpa mengurangi tingkat kontras.
+1. **Tanya Jawab (`<details> / <summary>`)**: Ditujukan bagi pengunjung profil untuk mengetahui pertanyaan umum seputar latar belakang dan preferensi kerja secara interaktif tanpa memenuhi ruang layar.
+2. **Lini Masa (`<ol>`)**: Ditujukan bagi perekrut atau rekan kerja untuk melihat riwayat pendidikan dan pengalaman secara kronologis dan terstruktur.
+3. **Keterampilan (`<dl>`)**: Ditujukan untuk menampilkan daftar keahlian teknis beserta deskripsi tingkat penguasanya secara ringkas dan rapi.
 
-### Token yang saya tetapkan
+## Evaluasi yang Dilaporkan
 
-| Token | Nilai | Untuk apa |
-|---|---|---|
-| `--clr-sakura-primary` | `#C2416C` | Tombol, tautan, penanda utama |
-| `--teks-utama` | `#2D3748` / `#F1F5F9` | Warna teks utama (Light/Dark) |
-| `--bg-halaman` | `#FFF5F7` / `#0F172A` | Latar halaman (Light/Dark) |
-| `--radius-md` | `0.5rem` | Sudut membulat kartu & tombol |
-| `--space-4` | `1rem` | Jarak standar antar elemen |
-
-*Kriteria selesai saya: mengubah `--clr-sakura-primary` di satu baris pada `tokens.css` harus mengubah warna seluruh aksen tombol, tautan, judul, dan garis fokus di halaman.*
-
-## Catatan Penggunaan AI
-AI digunakan untuk membantu memahami konsep CSS Design. 
+- **W3C — Nu Html Checker**: 0 Error, 0 Warning (seluruh elemen HTML valid sesuai standar W3C).
+- **WCAG — Kontras Warna**: Memenuhi standar kontras AA pada tema terang (light mode) maupun tema gelap (dark mode).
+- **WCAG — Aksesibilitas Keyboard**: Seluruh bagian baru (`<details>`, tombol pengalih tema, form, dan link) dapat dijangkau dan dioperasikan menggunakan tombol `Tab`.
+- **WCAG — Independensi Warna**: Informasi tetap dapat dipahami dengan jelas tanpa mengandalkan visual warna semata (menggunakan hirarki tipografi, batas border, dan garis fokus).
