@@ -1,0 +1,57 @@
+/* ==========================================================================
+   BASE.CSS — RESET & GLOBAL STYLES
+   ========================================================================== */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-utama);
+  font-size: var(--fs-base);
+  line-height: 1.6;
+  background-color: var(--bg-halaman);
+  color: var(--teks-utama);
+  padding: 2rem 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3 {
+  color: var(--teks-judul);
+  line-height: 1.25;
+  font-weight: 700;
+}
+
+h1 { font-size: var(--fs-xl); margin-bottom: 0.5rem; }
+h2 { font-size: var(--fs-lg); margin-bottom: 0.75rem; border-bottom: 2px solid var(--bingkai); padding-bottom: 0.25rem; }
+h3 { font-size: 1.15rem; margin-bottom: 0.25rem; }
+
+p { margin-bottom: 0.75rem; }
+p:last-child { margin-bottom: 0; }
+
+a {
+  color: var(--teks-pautan);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+a:hover { opacity: 0.8; }
+
+:focus-visible {
+  outline: 3px solid var(--fokus-ring);
+  outline-offset: 3px;
+  border-radius: 0.25rem;
+}
+
+img, picture {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+input, textarea, button { font: inherit; color: inherit; }
+
+ul, ol { padding-left: 1.5rem; margin-bottom: 1rem; }
+li { margin-bottom: 0.25rem; }
