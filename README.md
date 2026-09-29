@@ -35,27 +35,10 @@ AI digunakan untuk membantu memahami konsep CSS Design.
 
 # PERTEMUAN 5 - FLEXBOX & GRID PADA CSS P4
 
-Dokumentasi praktikum tata letak web responsif memanfaatkan kombinasi CSS Grid dan Flexbox, dilengkapi skema warna tema gelap beraksen oranye.
+Dokumentasi praktikum pertemuan ke-05 yaitu tata letak web yang memanfaatkan kombinasi CSS Grid dan Flexbox. Ini adalah perubahan kode CSS pada worksheet-p4 
 
 ## Ringkasan Pengerjaan
 
-- **Penerapan Layout**: Kerangka utama dan galeri disusun memakai CSS Grid, sedangkan komponen navigasi dan bagian internal kartu menggunakan Flexbox[cite: 1, 5, 8].
+- **Penerapan Layout**: Kerangka utama dan galeri disusun memakai CSS Grid, sedangkan komponen navigasi dan bagian internal kartu menggunakan Flexbox
 - **Galeri Otomatis**: Memanfaatkan `auto-fit` dan `minmax` agar grid galeri bersifat fleksibel dan penyesuaian layar berjalan otomatis tanpa media query.
-- **Uji Tampilan**: Memastikan halaman bebas *overflow* saat diuji dari layar HP (360px) hingga layar monitor lebar (1280px)[cite: 7].
-- **Struktur CSS**: Kode dibagi ke dalam 5 modul terpisah (`tokens.css`, `base.css`, `layout.css`, `komponen.css`, `tema.css`) dengan dukungan Dark Mode[cite: 1].
-
-## Jawaban Worksheet P5
-
-### A.3 Kapan Pakai Flex vs Grid
-- **Header & Navigasi**: Flexbox (penataan satu dimensi/sumbu)[cite: 5].
-- **Tata Letak Utama**: CSS Grid (pembagian area makro 2 kolom)[cite: 5].
-- **Galeri Kartu**: CSS Grid (penyesuaian jumlah kolom secara responsif)[cite: 5].
-- **Komponen Dalam Kartu**: Flexbox (penyusunan elemen internal)[cite: 5].
-
-### D.3 Teknik Penempatan Elemen
-- **Spanning Kartu**: Menggunakan `grid-column: span 2;`[cite: 6].
-- **Skema Tata Letak**: Mengatur struktur halaman via `grid-template-areas`[cite: 6].
-
-### F.2 Sintaks Kunci Galeri Responsif
-```css
-grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+- **Struktur CSS**: Kode dibagi ke dalam 5 modul terpisah (`tokens.css`, `base.css`, `layout.css`, `komponen.css`, `tema.css`) dengan dukungan Dark Mode 
