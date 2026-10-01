@@ -30,10 +30,10 @@ Repo ini memuat pekerjaan mata kuliah Pengembangan Aplikasi Berbasis Web.
 
 *Kriteria selesai saya: mengubah `--clr-sakura-primary` di satu baris pada `tokens.css` harus mengubah warna seluruh aksen tombol, tautan, judul, dan garis fokus di halaman.*
 
-## Catatan Penggunaan AI
+### Catatan Penggunaan AI
 AI digunakan untuk membantu memahami konsep CSS Design. 
 
-# PERTEMUAN 5 - FLEXBOX & GRID PADA CSS P4
+## PERTEMUAN 5 - FLEXBOX & GRID PADA CSS P4
 
 Dokumentasi praktikum pertemuan ke-05 yaitu tata letak web yang memanfaatkan kombinasi CSS Grid dan Flexbox. Ini adalah perubahan kode CSS pada worksheet-p4 
 
