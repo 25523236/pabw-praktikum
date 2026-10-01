@@ -46,8 +46,9 @@ Dokumentasi praktikum pertemuan ke-05 yaitu tata letak web yang memanfaatkan kom
 ## Pertemuan 6 — Responsif Mobile-First
 Dokumentasi praktikum pertemuan ke-06 mengenai penerapan tata letak responsif berbasis Mobile-First menggunakan media query dan unit relatif.
 
-Ringkasan Pengerjaan:
-- Mobile-First: Menulis gaya dasar untuk layar sempit (360px) tanpa media query
-- Pengujian Layar: Memastikan tampilan rapi dan bebas dari gulir mendatar (horizontal scroll) pada lebar 360px, 768px, dan 1280px
-- Penanganan Media: Membatasi gambar dengan `max-width: 100%` serta memberi wadah `overflow-x: auto` pada tabel
-- Berkas Baru: Menambahkan modul `responsif.css`
+## Ringkasan Pengerjaan
+
+- **Mobile-First**: Menulis gaya dasar untuk layar sempit (360px) tanpa media query
+- **Pengujian Layar**: Memastikan tampilan rapi dan bebas dari gulir mendatar (horizontal scroll) pada lebar 360px, 768px, dan 1280px
+- **Penanganan Media**: Membatasi gambar dengan `max-width: 100%` serta memberi wadah `overflow-x: auto` pada tabel
+- **Berkas Baru**: Menambahkan modul `responsif.css`
