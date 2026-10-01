@@ -42,6 +42,9 @@ Dokumentasi praktikum pertemuan ke-05 yaitu tata letak web yang memanfaatkan kom
 - **Penerapan Layout**: Kerangka utama dan galeri disusun memakai CSS Grid, sedangkan komponen navigasi dan bagian internal kartu menggunakan Flexbox
 - **Galeri Otomatis**: Memanfaatkan `auto-fit` dan `minmax` agar grid galeri bersifat fleksibel dan penyesuaian layar berjalan otomatis tanpa media query.
 - **Struktur CSS**: Kode dibagi ke dalam 5 modul terpisah (`tokens.css`, `base.css`, `layout.css`, `komponen.css`, `tema.css`) dengan dukungan Dark Mode
+  
+### Catatan Penggunaan AI
+AI digunakan untuk membantu memahami konsep Flexbox & Grid pada CSS.
 
 ## Pertemuan 6 — Responsif Mobile-First
 Dokumentasi praktikum pertemuan ke-06 mengenai penerapan tata letak responsif berbasis Mobile-First menggunakan media query dan unit relatif.
@@ -52,3 +55,6 @@ Dokumentasi praktikum pertemuan ke-06 mengenai penerapan tata letak responsif be
 - **Pengujian Layar**: Memastikan tampilan rapi dan bebas dari gulir mendatar (horizontal scroll) pada lebar 360px, 768px, dan 1280px
 - **Penanganan Media**: Membatasi gambar dengan `max-width: 100%` serta memberi wadah `overflow-x: auto` pada tabel
 - **Berkas Baru**: Menambahkan modul `responsif.css`
+
+### Catatan Penggunaan AI
+AI digunakan untuk membantu memahami konsep fondasi dari Responsive Mobile.
