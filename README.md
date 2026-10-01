@@ -13,7 +13,7 @@ Repo ini memuat pekerjaan mata kuliah Pengembangan Aplikasi Berbasis Web.
 - **Jarak Dasar:** Spasi standar `1rem`, jarak antar bagian `1.5rem`
 - **Radius & Bayangan:** Radius `0.75rem`, Bayangan `0 4px 18px rgba(194, 65, 108, 0.08)`
 
-- ## Design token halaman profil
+### Design token halaman profil
 
 - **Berkas gaya yang dibuat:** `tokens.css`, `base.css`, `layout.css`, `komponen.css`, `tema.css`
 - **Warna utama:** `#C2416C` (Sakura Pink), dipilih karena memberikan identitas visual yang lembut, hangat, serta mudah dipadukan dengan mode gelap (dongker) tanpa mengurangi tingkat kontras.
@@ -33,7 +33,7 @@ Repo ini memuat pekerjaan mata kuliah Pengembangan Aplikasi Berbasis Web.
 ### Catatan Penggunaan AI
 AI digunakan untuk membantu memahami konsep CSS Design. 
 
-## PERTEMUAN 5 - FLEXBOX & GRID PADA CSS P4
+## Pertemuan 5 - FLEXBOX & GRID pada CSS
 
 Dokumentasi praktikum pertemuan ke-05 yaitu tata letak web yang memanfaatkan kombinasi CSS Grid dan Flexbox. Ini adalah perubahan kode CSS pada worksheet-p4 
 
