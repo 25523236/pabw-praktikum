@@ -59,7 +59,7 @@ Dokumentasi praktikum pertemuan ke-06 mengenai penerapan tata letak responsif be
 ### Catatan Penggunaan AI
 AI digunakan untuk membantu memahami konsep fondasi dari Responsive Mobile.
 
-# Pertemuan 8 — JavaScript Modern ES6+
+## Pertemuan 8 — JavaScript Modern ES6+
 
 Dokumentasi praktikum pertemuan ke-08 mengenai penerapan JavaScript Modern ES6+ untuk pengelolaan data halaman, fungsi murni, array methods, manipulasi DOM, serta debugging menggunakan Console.
 
