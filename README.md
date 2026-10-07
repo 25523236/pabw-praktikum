@@ -59,7 +59,7 @@ Dokumentasi praktikum pertemuan ke-06 mengenai penerapan tata letak responsif be
 ### Catatan Penggunaan AI
 AI digunakan untuk membantu memahami konsep fondasi dari Responsive Mobile.
 
-## Pertemuan 8 — JavaScript Modern ES6+
+## Pertemuan 8 — JavaScript Modern
 
 Dokumentasi praktikum pertemuan ke-08 mengenai penerapan JavaScript Modern ES6+ untuk pengelolaan data halaman, fungsi murni, array methods, manipulasi DOM, serta debugging menggunakan Console.
 
@@ -69,11 +69,9 @@ Dokumentasi praktikum pertemuan ke-08 mengenai penerapan JavaScript Modern ES6+ 
 - **Fungsi Murni**: Membuat fungsi `buatPerkenalan()` dan `formatKeahlian()` yang memiliki satu tugas dan menggunakan `return`.
 - **Array Methods**: Menerapkan `map()`, `filter()`, dan `find()` untuk mengolah data proyek.
 - **Spread Operator**: Menggunakan spread operator (`...`) untuk membuat salinan `daftarProyek` sebelum melakukan `sort()` agar data asli tidak berubah.
-- **Template Literals**: Menggunakan template literal untuk membentuk teks berdasarkan data profil.
-- **Manipulasi DOM**: Menampilkan data dari JavaScript ke elemen HTML menggunakan `querySelector()`, `textContent`, dan `innerHTML`.
 - **Console dan Debugging**: Menggunakan `console.log()` dan `console.table()` untuk memeriksa tipe data, hasil pengolahan array, serta melakukan debugging terhadap `undefined`, `null`, dan input bertipe string.
 - **Pengujian**: Memastikan JavaScript dapat dijalankan tanpa error dan hasil `map()`, `filter()`, `find()`, serta `sort()` sesuai dengan data yang digunakan.
 
 ### Catatan Penggunaan AI
 
-AI digunakan untuk membantu memahami dan memeriksa konsep JavaScript Modern ES6+, seperti fungsi murni, `map()`, `filter()`, `find()`, spread operator, manipulasi DOM, serta membantu proses debugging dan pengecekan kode.
+AI digunakan untuk membantu memahami dan memeriksa konsep JavaScript Modern, seperti fungsi murni, `map()`, `filter()`, `find()`, spread operator, serta membantu proses debugging dan pengecekan kode.
