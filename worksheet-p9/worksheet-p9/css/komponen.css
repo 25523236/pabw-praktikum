@@ -203,3 +203,12 @@ h1, h2, h3, p, a, dt, dd {
   outline: 2px solid var(--clr-sakura-primary);
   outline-offset: 2px;
 }
+/* Penanda error tambahan untuk atribut aria-invalid */
+input[aria-invalid="true"], textarea[aria-invalid="true"] {
+  border: 2px solid var(--warna-bahaya) !important;
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #ffffff inset !important;
+  -webkit-text-fill-color: var(--teks-utama) !important;
+}

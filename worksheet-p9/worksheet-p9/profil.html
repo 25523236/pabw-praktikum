@@ -144,8 +144,8 @@
         Semua kolom bertanda wajib harus diisi.
       </p>
 
-      <form action="#" method="post">
-
+      <form novalidate>
+        
         <fieldset>
 
           <legend>Data pengirim</legend>
@@ -162,6 +162,7 @@
               autocomplete="name"
               required
             >
+          <span class="pesan-galat">Isian ini wajib diisi.</span>
           </p>
 
 
@@ -177,6 +178,7 @@
               autocomplete="email"
               required
             >
+          <span class="pesan-galat">Isian ini wajib diisi dengan format email yang sah.</span>
           </p>
 
 
@@ -198,7 +200,7 @@
             <span id="nim-bantuan">
               Delapan digit angka, contoh 25523236.
             </span>
-
+            <span class="pesan-galat">NIM harus tepat 8 digit angka.</span>
           </p>
 
 
@@ -213,6 +215,7 @@
               rows="4"
               required
             ></textarea>
+            <span class="pesan-galat">Isian ini wajib diisi.</span>
           </p>
 
 
