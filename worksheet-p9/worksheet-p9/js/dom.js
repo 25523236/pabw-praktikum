@@ -2,22 +2,50 @@ import { daftarProyek } from "./app.js";
 
 const wadah = document.querySelector("#daftar");
 const kosong = document.querySelector("#pesan-kosong");
+const barisFilter = document.querySelector("#filter");
 
 function buatKartu(proyek) {
   const li = document.createElement("li");
   li.className = "kartu";
-  // Memasukkan teks judul ke dalam elemen
-  li.textContent = proyek.judul; 
+  li.textContent = proyek.judul;
   return li;
 }
 
 function render(daftar) {
-  // Lembar B.2: Wadah harus dikosongkan sebelum diisi ulang
   wadah.textContent = "";
-
-  // B.1: Memasukkan proyek ke wadah
+  
+  // Tangani keadaan kosong
+  if (daftar.length === 0) {
+    kosong.hidden = false;
+    return;
+  }
+  
+  kosong.hidden = true;
   daftar.forEach((proyek) => wadah.append(buatKartu(proyek)));
 }
 
-// Menjalankan fungsi render saat pertama kali halaman dimuat
+function tandaiTombolAktif(tombolAktif) {
+  document.querySelectorAll("#filter button").forEach((tombol) => {
+    tombol.classList.toggle("aktif", tombol === tombolAktif);
+  });
+}
+
+// Event Delegation untuk tombol filter
+barisFilter.addEventListener("click", (event) => {
+  const tombol = event.target.closest("button");
+  if (!tombol) return; // Abaikan klik di luar tombol
+
+  const kategori = tombol.dataset.kategori;
+  
+  // Saring data
+  const terpilih = daftarProyek.filter(
+    (proyek) => kategori === "semua" || proyek.kategori === kategori
+  );
+  
+  // Perbarui halaman
+  tandaiTombolAktif(tombol);
+  render(terpilih);
+});
+
+// Render awal saat halaman pertama kali dibuka
 render(daftarProyek);

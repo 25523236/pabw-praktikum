@@ -170,3 +170,36 @@ input:focus, textarea:focus {
 h1, h2, h3, p, a, dt, dd {
   overflow-wrap: anywhere;
 }
+
+
+#filter {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+#filter button {
+  background-color: var(--bg-halaman);
+  color: var(--teks-utama);
+  border: 1px solid var(--bingkai);
+  padding: 0.4rem 1rem;
+  border-radius: 2rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+#filter button:hover {
+  background-color: var(--bg-aksen);
+}
+
+/* Penanda tombol yang sedang aktif (Wajib dari Lembar C.2) */
+#filter button.aktif {
+  background-color: var(--clr-sakura-primary);
+  color: white;
+  border-color: var(--clr-sakura-primary);
+  /* Outline sesuai permintaan worksheet */
+  outline: 2px solid var(--clr-sakura-primary);
+  outline-offset: 2px;
+}
