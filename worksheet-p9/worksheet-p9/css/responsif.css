@@ -1,0 +1,46 @@
+/*dasar: berlaku di semua lebar*/
+main {
+    display: grid;
+    grid-template-columns:1fr;
+    gap:var(--space-4, 1.5rem);
+}
+
+.grid, #karya ul, .karya ul {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4, 1.5rem);
+}
+
+
+/* gambar tidak melebihi wadahnya */
+img { 
+  max-width: 100%; 
+  height: auto; 
+}
+
+/* tabel lebar dapat digulir sendiri */
+table { 
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+/* teks mengikuti ukuran huruf pengguna */
+p { 
+  font-size: 1rem; 
+  line-height: 1.6; 
+}
+
+/* tablet: galeri dua kolom */
+@media (min-width: 48rem) {
+  .grid, #karya ul, .karya ul { 
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+/* desktop: sidebar bersanding dengan konten */
+@media (min-width: 60rem) {
+  .grid, #karya ul, .karya ul { 
+    grid-template-columns: repeat(3, 1fr); 
+  }
+}

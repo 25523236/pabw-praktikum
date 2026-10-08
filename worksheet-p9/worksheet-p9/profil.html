@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+
+  <title>Profil Diah Putri Pertiwi — PABW 2026/2027</title>
+  <meta
+    name="description"
+    content="Halaman profil Diah Putri Pertiwi, mahasiswa Informatika Universitas Islam Indonesia."
+  >
+
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/komponen.css">
+  <link rel="stylesheet" href="css/tema.css">
+  <link rel="stylesheet" href="css/responsif.css">
+</head>
+
+<body>
+
+  <a class="lewati" href="#utama">
+    Lewati ke konten utama
+  </a>
+
+  <header class="kepala">
+
+    <input
+      type="checkbox"
+      id="tema"
+      class="pengalih-tema"
+    >
+
+    <label for="tema" class="tombol-tema"></label>
+
+    <h1 id="nama-profil"></h1>
+    <p id="peran-profil"></p>
+    <p
+      id="tagline-profil"
+      class="tagline"
+    ></p>
+
+    <nav aria-label="Navigasi utama">
+      <ul>
+        <li>
+          <a href="#tentang">Tentang</a>
+        </li>
+        <li>
+          <a href="#karya">Karya</a>
+        </li>
+        <li>
+          <a href="#kontak">Kontak</a>
+        </li>
+      </ul>
+    </nav>
+
+  </header>
+
+
+  <main id="utama">
+
+    <!-- =========================
+         TENTANG SAYA
+         ========================= -->
+
+    <section id="tentang">
+
+      <h2>Tentang saya</h2>
+
+      <figure class="foto">
+
+        <img
+          src="media/foto-profil.jpeg"
+          alt="Foto profil Diah Putri Pertiwi."
+          width="480"
+          height="300"
+          loading="lazy"
+        >
+
+        <figcaption>
+          Foto profil
+        </figcaption>
+
+      </figure>
+
+      <p id="bio-profil"></p>
+
+
+      <table>
+
+        <caption>
+          Kegiatan yang saya ikuti semester ini
+        </caption>
+
+        <thead>
+          <tr>
+            <th scope="col">Kegiatan</th>
+            <th scope="col">Peran</th>
+            <th scope="col">Waktu</th>
+          </tr>
+        </thead>
+
+        <tbody id="daftar-kegiatan">
+
+          <!--
+            Isi tabel kegiatan diisi oleh JavaScript.
+          -->
+
+        </tbody>
+
+      </table>
+
+    </section>
+
+
+    <!-- =========================
+         KARYA SAYA
+         ========================= -->
+
+    <section id="karya">
+      <h2>Karya saya</h2>
+      <div id="filter">
+        <button data-kategori="semua" class="aktif">Semua</button>
+        <button data-kategori="web">Web</button>
+        <button data-kategori="data">Data</button>
+      </div>
+      <ul id="daftar"></ul>
+      <p id="pesan-kosong" hidden>Tidak ada proyek pada kategori itu.</p>
+    </section>
+
+
+    <!-- =========================
+         KONTAK
+         ========================= -->
+
+    <section id="kontak">
+
+      <h2>Hubungi saya</h2>
+
+      <p>
+        Isi formulir berikut.
+        Semua kolom bertanda wajib harus diisi.
+      </p>
+
+      <form action="#" method="post">
+
+        <fieldset>
+
+          <legend>Data pengirim</legend>
+
+          <p>
+            <label for="nama">
+              Nama lengkap
+            </label>
+
+            <input
+              id="nama"
+              name="nama"
+              type="text"
+              autocomplete="name"
+              required
+            >
+          </p>
+
+
+          <p>
+            <label for="email">
+              Email
+            </label>
+
+            <input
+              id="email"
+              name="email"
+              type="email"
+              autocomplete="email"
+              required
+            >
+          </p>
+
+
+          <p>
+            <label for="nim">
+              NIM
+            </label>
+
+            <input
+              id="nim"
+              name="nim"
+              type="text"
+              inputmode="numeric"
+              pattern="[0-9]{8}"
+              aria-describedby="nim-bantuan"
+              required
+            >
+
+            <span id="nim-bantuan">
+              Delapan digit angka, contoh 25523236.
+            </span>
+
+          </p>
+
+
+          <p>
+            <label for="pesan">
+              Pesan
+            </label>
+
+            <textarea
+              id="pesan"
+              name="pesan"
+              rows="4"
+              required
+            ></textarea>
+          </p>
+
+
+          <button type="submit">
+            Kirim
+          </button>
+
+        </fieldset>
+
+      </form>
+
+    </section>
+
+
+    <!-- =========================
+         TANYA JAWAB
+         ========================= -->
+
+    <section id="tanya-jawab">
+
+      <h2>Tanya Jawab</h2>
+
+      <details>
+
+        <summary>
+          Mengapa menyukai integrasi Desain & Teknologi?
+        </summary>
+
+        <p>
+          Karena perpaduan logika pemrograman dan estetika
+          desain antarmuka menciptakan pengalaman pengguna
+          yang tidak hanya fungsional tetapi juga nyaman dipandang.
+        </p>
+
+      </details>
+
+
+      <details>
+
+        <summary>
+          Perangkat lunak apa yang sering digunakan?
+        </summary>
+
+        <p>
+          VS Code, Chrome DevTools, Figma untuk desain antarmuka,
+          serta tools perancangan tata ruang 3D.
+        </p>
+
+      </details>
+
+    </section>
+
+
+    <!-- =========================
+         PERJALANAN AKADEMIK
+         ========================= -->
+
+    <section id="perjalanan">
+
+      <h2>Perjalanan Akademik</h2>
+
+      <ol
+        id="lini-masa"
+        class="lini"
+      >
+
+        <!--
+          Data perjalanan diisi oleh JavaScript.
+        -->
+
+      </ol>
+
+    </section>
+
+
+    <!-- =========================
+         KETERAMPILAN
+         ========================= -->
+
+    <section id="keterampilan">
+
+      <h2>Keterampilan & Minat</h2>
+
+      <dl
+        id="daftar-keterampilan"
+        class="keterampilan"
+      >
+
+        <!--
+          Data keterampilan diisi oleh JavaScript.
+        -->
+
+      </dl>
+
+    </section>
+
+  </main>
+
+
+  <footer class="kaki">
+
+    <p>
+      Diah Putri Pertiwi · 25523236 ·
+      <time datetime="2026">2026</time>
+    </p>
+
+  </footer>
+  <script type="module" src="js/app.js"></script>
+  <script type="module" src="js/dom.js"></script>
+
+</body>
+</html>
