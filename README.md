@@ -75,3 +75,18 @@ Dokumentasi praktikum pertemuan ke-08 mengenai penerapan JavaScript Modern ES6+ 
 ### Catatan Penggunaan AI
 
 AI digunakan untuk membantu memahami dan memeriksa konsep JavaScript Modern, seperti fungsi murni, `map()`, `filter()`, `find()`, spread operator, serta membantu proses debugging dan pengecekan kode.
+
+## Pertemuan 9 — DOM, Event, dan Interaktivitas
+
+Dokumentasi praktikum pertemuan ke-09 mengenai manipulasi DOM, penanganan event (event delegation), serta validasi form interaktif menggunakan JavaScript.
+
+## Ringkasan Pengerjaan
+
+- **Render dari Data**: Menampilkan daftar proyek secara dinamis ke halaman menggunakan `createElement`, `textContent`, dan `append` dari data array (`app.js`).
+- **Event Delegation**: Memasang satu *event listener* pada elemen induk `#filter` untuk menangani seluruh klik tombol kategori secara efisien.
+- **Validasi Form**: Menerapkan pencegahan *reload* (`preventDefault`), validasi input secara *real-time* dengan atribut `aria-invalid`, serta menahan tombol kirim hingga seluruh data sah.
+- **Pesan Galat**: Menampilkan pesan peringatan kesalahan per kolom dan memfokuskan kembali pada kolom yang belum valid.
+
+### Catatan Penggunaan AI
+
+AI digunakan untuk membantu memahami konsep manipulasi DOM, *event delegation*, serta membantu proses debugging validasi form dan struktur kode pada `dom.js`.
