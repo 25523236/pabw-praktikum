@@ -90,3 +90,19 @@ Dokumentasi praktikum pertemuan ke-09 mengenai manipulasi DOM, penanganan event 
 ### Catatan Penggunaan AI
 
 AI digunakan untuk membantu memahami konsep manipulasi DOM, *event delegation*, serta membantu proses debugging validasi form dan struktur kode pada `dom.js`.
+
+## Pertemuan 10 — JavaScript Asinkron: fetch, Promise, dan JSON
+
+Dokumentasi praktikum pertemuan ke-10 mengenai penerapan JavaScript Asinkron dengan `fetch` API, pemrosesan format data JSON, penggunaan `async/await`, penanganan galat (*error handling*), serta pemisahan lapisan data (`js/api.js`) dan antarmuka (`js/app.js`)
+
+## Ringkasan Pengerjaan
+
+- **Pemisahan Lapisan Data**: Membuat berkas modular `js/api.js` khusus untuk menangani pemanggilan `fetch` dan mengekspor fungsi `ambilNotisia()` agar berkas tampilan (`js/app.js`) tidak melakukan pemanggilan API secara langsung
+- **Pemeriksaan Respons HTTP**: Memeriksa status `respons.ok` sebelum membaca isi data dengan `json()` untuk memastikan HTTP status 404/500 tertangkap sebagai galat lewat `throw new Error()`
+- **Penanganan Galat (Error Handling)**: Membungkus alur pemanggilan data dengan blok `try/catch` di `api.js` dan `app.js` untuk menangkap potensi galat jaringan maupun URL yang salah
+- **Keadaan Antarmuka (Interface States)**: Menangani empat kondisi tampilan secara rinci pada antarmuka, yaitu keadaan **memuat** (*loading*), **berhasil** (*success*), **gagal** (*error*), dan **kosong** (*empty state* saat `daftar.length === 0`)
+- **Pengujian & Debugging**: Melakukan verifikasi alur data melalui panel Network dan Console pada browser Chrome DevTools.
+
+### Catatan Penggunaan AI
+
+AI digunakan sebagai mitra diskusi untuk memahami alur kerja `async/await`, memisahkan struktur modul antarlapisan (`api.js` & `app.js`), serta membantu mengidentifikasi dan memecahkan masalah (*troubleshooting*) penanganan empat keadaan antarmuka
