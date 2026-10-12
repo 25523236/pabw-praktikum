@@ -256,6 +256,15 @@ const hasil = inputNim.value + 10;
 
 //galat sudah dibersihkan, console sudah tidak menampilkan galat lagi, dan hasil sudah sesuai dengan yang diharapkan.
 
-import { muat } from './api.js';
+import { ambilNotisia } from './api.js';
 
-muat();
+async function tampilkan() {
+  try {
+    const daftar = await ambilNotisia();
+    console.log("Berhasil memuat:", daftar);
+  } catch (galat) {
+    console.log("Gagal memuat data di app.js:", galat.message);
+  }
+}
+
+tampilkan();
