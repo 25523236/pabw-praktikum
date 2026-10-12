@@ -1,0 +1,114 @@
+/* ==========================================================================
+   TEMA.CSS — SAKLAR TEMA & OVERRIDE TEMA GELAP
+   ========================================================================== */
+
+/* 1. Pengubah Variabel Mode Gelap */
+:root:has(#tema:checked) {
+  --bg-halaman: #0F172A;
+  --bg-kartu: #1E293B;
+  --teks-utama: #F1F5F9;
+  --teks-judul: #F472B6;
+  --teks-pautan: #F472B6;
+  --bingkai: #334155;
+  --bg-aksen: #334155;
+}
+
+/* 2. Saklar Tema (Button & Checkbox) */
+.pengalih-tema {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: #DB2777;
+}
+
+.saklar-pojok, .tombol-tema, .label-saklar {
+  display: inline-flex !important;
+  align-items: center;
+  width: fit-content !important;
+  max-width: max-content !important;
+  white-space: nowrap;
+}
+
+.tombol-tema {
+  gap: 0.5rem;
+  padding: 0.4rem 0.9rem;
+  border: 1.5px solid var(--bingkai);
+  border-radius: 2rem;
+  background-color: var(--bg-kartu);
+  color: var(--teks-utama);
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.tombol-tema::after { content: "☀️ Mode Terang (Pink)"; }
+
+:root:has(#tema:checked) .tombol-tema {
+  background-color: #334155;
+  border-color: #F472B6;
+  color: #FFFFFF;
+}
+:root:has(#tema:checked) .tombol-tema::after { content: "🌙 Mode Gelap (Dongker)"; }
+
+:root:has(#tema:checked) .foto img {
+  filter: brightness(0.85) contrast(1.05);
+}
+
+/* 3. Input & Textarea Mode Gelap */
+:root:has(#tema:checked) input[type="text"],
+:root:has(#tema:checked) input[type="email"],
+:root:has(#tema:checked) textarea {
+  background-color: #0f172a !important;
+  color: #f1f5f9 !important;
+  border-color: #334155 !important;
+}
+
+:root:has(#tema:checked) input:focus,
+:root:has(#tema:checked) textarea:focus {
+  border-color: #f472b6 !important;
+  box-shadow: 0 0 0 3px rgba(244, 114, 182, 0.25) !important;
+}
+
+/* 4. Tombol Kirim (Submit Button) */
+button[type="submit"], input[type="submit"], .tombol-kirim {
+  background-color: #db2777 !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  font-size: 1rem;
+  padding: 0.85rem 1.5rem;
+  border: none !important;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 1rem;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 4px 14px rgba(219, 39, 119, 0.3);
+}
+
+button[type="submit"]:hover, input[type="submit"]:hover, .tombol-kirim:hover {
+  background-color: #be185d !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(219, 39, 119, 0.4);
+}
+
+button[type="submit"]:active, input[type="submit"]:active, .tombol-kirim:active {
+  transform: translateY(0);
+}
+
+/* Tombol Kirim Mode Gelap */
+:root:has(#tema:checked) button[type="submit"],
+:root:has(#tema:checked) input[type="submit"],
+:root:has(#tema:checked) .tombol-kirim {
+  background-color: #f472b6 !important;
+  color: #0f172a !important;
+  box-shadow: 0 4px 14px rgba(244, 114, 182, 0.25);
+}
+
+:root:has(#tema:checked) button[type="submit"]:hover,
+:root:has(#tema:checked) input[type="submit"]:hover,
+:root:has(#tema:checked) .tombol-kirim:hover {
+  background-color: #f687b3 !important;
+  box-shadow: 0 6px 18px rgba(244, 114, 182, 0.4);
+}
