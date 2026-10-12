@@ -105,4 +105,4 @@ Dokumentasi praktikum pertemuan ke-10 mengenai penerapan JavaScript Asinkron den
 
 ### Catatan Penggunaan AI
 
-AI digunakan sebagai mitra diskusi untuk memahami alur kerja `async/await`, memisahkan struktur modul antarlapisan (`api.js` & `app.js`), serta membantu mengidentifikasi dan memecahkan masalah (*troubleshooting*) penanganan empat keadaan antarmuka
+AI digunakan untuk membantu memahami konsep alur kerja `async/await`, memisahkan struktur modul antarlapisan (`api.js` & `app.js`), serta membantu mengidentifikasi dan memecahkan masalah (*troubleshooting*)
