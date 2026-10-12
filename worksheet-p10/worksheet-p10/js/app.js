@@ -258,12 +258,38 @@ const hasil = inputNim.value + 10;
 
 import { ambilNotisia } from './api.js';
 
+const wadah = document.querySelector('#daftar');
+function gambar(daftar) {
+  wadah.textContent = ''; 
+  daftar.forEach(function (n) {
+    const kartu = document.createElement('article');
+    kartu.className = 'kartu';
+
+    const judul = document.createElement('h3');
+    judul.textContent = n.titulu; 
+
+    const deskripsi = document.createElement('p');
+    deskripsi.textContent = n.deskripsi; 
+
+    kartu.appendChild(judul);
+    kartu.appendChild(deskripsi);
+    wadah.appendChild(kartu); 
+  });
+}
 async function tampilkan() {
+  if (!wadah) return;
+
+  wadah.textContent = 'Memuat...';
+
   try {
     const daftar = await ambilNotisia();
-    console.log("Berhasil memuat:", daftar);
+    if (daftar.length === 0) {
+      wadah.textContent = 'Belum ada notisia';
+      return;
+    }
+    gambar(daftar);
   } catch (galat) {
-    console.log("Gagal memuat data di app.js:", galat.message);
+    wadah.textContent = 'Gagal memuat data: ' + galat.message;
   }
 }
 
