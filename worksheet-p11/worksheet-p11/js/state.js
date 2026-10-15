@@ -36,6 +36,10 @@ export const state = {
 
 export function pilihKategori(kategoriBaru) {
   state.kategoriAktif = kategoriBaru;
+  if (kategoriBaru === "semua") {
+    aturUlang();
+  } else {
   simpan(state);
+  }
   render(state);
 }

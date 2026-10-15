@@ -10,9 +10,7 @@ export function pasangPendengar() {
       if (!tombol) return;
 
       if (tombol.id === "tombol-reset") {
-        aturUlang();
-        state.kategoriAktif = "semua";
-        render(state);
+        pilihKategori("semua"); 
         return;
       }
 
