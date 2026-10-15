@@ -5,3 +5,6 @@ import { pasangPendengar } from "./events.js";
 inisialisasiProfil();
 render(state);
 pasangPendengar();
+
+window.state = state;
+window.render = render;
