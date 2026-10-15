@@ -1,93 +1,92 @@
-import { daftarProyek } from "./app.js";
+import { profil, kegiatan, perjalanan, keterampilan } from "./data.js";
 
 const wadah = document.querySelector("#daftar");
 const kosong = document.querySelector("#pesan-kosong");
-const barisFilter = document.querySelector("#filter");
 
-function buatKartu(proyek) {
+export function buatKartu(proyek) {
   const li = document.createElement("li");
   li.className = "kartu";
   li.textContent = proyek.judul;
   return li;
 }
 
-function render(daftar) {
+export function saring(state) {
+  if (state.kategoriAktif === "semua") {
+    return state.daftarProyek;
+  }
+  return state.daftarProyek.filter(
+    (proyek) => proyek.kategori === state.kategoriAktif
+  );
+}
+
+export function tandaiTombolAktif(kategoriAktif) {
+  document.querySelectorAll("#filter button").forEach((tombol) => {
+    tombol.classList.toggle("aktif", tombol.dataset.kategori === kategoriAktif);
+  });
+}
+
+export function render(state) {
+  if (!wadah) return;
   wadah.textContent = "";
-  if (daftar.length === 0) {
-    kosong.hidden = false;
+
+  const tampil = saring(state);
+
+  if (tampil.length === 0) {
+    if (kosong) kosong.hidden = false;
+    tandaiTombolAktif(state.kategoriAktif);
     return;
   }
-  kosong.hidden = true;
-  daftar.forEach((proyek) => wadah.append(buatKartu(proyek)));
+
+  if (kosong) kosong.hidden = true;
+  tampil.forEach((proyek) => wadah.append(buatKartu(proyek)));
+  tandaiTombolAktif(state.kategoriAktif);
 }
 
-function tandaiTombolAktif(tombolAktif) {
-  document.querySelectorAll("#filter button").forEach((tombol) => {
-    tombol.classList.toggle("aktif", tombol === tombolAktif);
-  });
-}
+export function inisialisasiProfil() {
+  const namaEl = document.querySelector("#nama-profil");
+  const peranEl = document.querySelector("#peran-profil");
+  const taglineEl = document.querySelector("#tagline-profil");
+  const bioEl = document.querySelector("#bio-profil");
 
-barisFilter.addEventListener("click", (event) => {
-  const tombol = event.target.closest("button");
-  if (!tombol) return;
-  const kategori = tombol.dataset.kategori;
-  const terpilih = daftarProyek.filter(
-    (proyek) => kategori === "semua" || proyek.kategori === kategori
-  );
-  tandaiTombolAktif(tombol);
-  render(terpilih);
-});
+  if (namaEl) namaEl.textContent = profil.nama;
+  if (peranEl) peranEl.textContent = profil.peran;
+  if (taglineEl) taglineEl.textContent = profil.tagline;
+  if (bioEl) bioEl.textContent = profil.bio;
 
-render(daftarProyek);
-
-const formKontak = document.querySelector("form");
-const tombolKirim = formKontak.querySelector("button[type='submit']");
-const semuaKolom = formKontak.querySelectorAll("input, textarea");
-
-function periksaForm() {
-  let formSah = true;
-
-  semuaKolom.forEach((kolom) => {
-    let sah = true;
-    const nilai = kolom.value.trim();
-
-    if (nilai === "") {
-      sah = false;
-    } else if (kolom.type === "email" && !nilai.includes("@")) {
-      sah = false;
-    } else if (kolom.id === "nim" && !/^[0-9]{8}$/.test(nilai)) {
-      sah = false;
-    }
-
-    if (sah) {
-      kolom.removeAttribute("aria-invalid");
-    } else {
-      kolom.setAttribute("aria-invalid", "true");
-      formSah = false;
-    }
-  });
-
-  tombolKirim.disabled = !formSah;
-  return formSah;
-}
-
-semuaKolom.forEach((kolom) => {
-  kolom.addEventListener("input", periksaForm);
-});
-
-formKontak.addEventListener("submit", (event) => {
-  event.preventDefault();
-  const sah = periksaForm();
-  if (!sah) {
-    const kolomPertamaSalah = formKontak.querySelector('[aria-invalid="true"]');
-    if (kolomPertamaSalah) {
-      kolomPertamaSalah.focus();
-    }
-  } else {
-    alert("Form valid, pesan terkirim!");
-    formKontak.reset();
-    periksaForm();
+  const kegiatanEl = document.querySelector("#daftar-kegiatan");
+  if (kegiatanEl) {
+    kegiatanEl.innerHTML = kegiatan
+      .map(
+        (item) => `
+        <tr>
+          <th scope="row">${item.nama}</th>
+          <td>${item.peran}</td>
+          <td>${item.waktu}</td>
+        </tr>`
+      )
+      .join("");
   }
-});
 
-periksaForm();
+  const perjalananEl = document.querySelector("#lini-masa");
+  if (perjalananEl) {
+    perjalananEl.innerHTML = perjalanan
+      .map(
+        (item) => `
+        <li>
+          <time>${item.tahun}</time> — ${item.isi}
+        </li>`
+      )
+      .join("");
+  }
+
+  const keterampilanEl = document.querySelector("#daftar-keterampilan");
+  if (keterampilanEl) {
+    keterampilanEl.innerHTML = keterampilan
+      .map(
+        (item) => `
+        <dt>${item.nama}</dt>
+        <dd>${item.keterangan}</dd>`
+      )
+      .join("");
+  }
+}
