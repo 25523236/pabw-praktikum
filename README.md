@@ -106,3 +106,21 @@ Dokumentasi praktikum pertemuan ke-10 mengenai penerapan JavaScript Asinkron den
 ### Catatan Penggunaan AI
 
 AI digunakan untuk membantu memahami konsep alur kerja `async/await`, memisahkan struktur modul antarlapisan (`api.js` & `app.js`), serta membantu mengidentifikasi dan memecahkan masalah (*troubleshooting*)
+
+## Pertemuan 11 — Modul, State, dan Penyimpanan Klien
+
+Dokumentasi praktikum pertemuan ke-11 mengenai pemecahan struktur JavaScript menjadi 5 modul utama dengan tanggung jawab tunggal, pengelolaan keadaan (*state management*) terpusat, serta penyimpanan preferensi antarmuka pengguna ke `localStorage` dengan penanganan simpanan rusak.
+
+### Ringkasan Pengerjaan
+
+- **Modularisasi JavaScript (ES Modules)**: Memecah kode monolith menjadi 5 modul wajib (`data.js`, `state.js`, `dom.js`, `events.js`, `app.js`) dengan jalur impor relatif yang eksplisit (`./` dan ekstensi `.js`).
+- **Pemisahan State dari DOM**: Memindahkan status kategori aktif keluar dari atribut HTML/DOM ke dalam objek `state` terpusat di `state.js` sebagai *single source of truth*.
+- **Penyimpanan Lokal (localStorage)**: Menyimpan preferensi pilihan kategori pengguna ke `localStorage` menggunakan `JSON.stringify()` dan memuatnya kembali dengan `JSON.parse()`.
+- **Verifikasi Lingkungan**: Memeriksa kesiapan versi Node.js dan NPM di terminal sebagai persiapan materi framework pada pertemuan berikutnya.
+
+### Versi Dependensi
+- **Node.js**: `v24.21.0`
+- **NPM**: `11.19.0`
+
+### Catatan Penggunaan AI
+AI membantu refactoring modul JS, penyusunan `try/catch`, dan debugging `localStorage`.
