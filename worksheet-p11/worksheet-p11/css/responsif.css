@@ -1,0 +1,39 @@
+main {
+    display: grid;
+    grid-template-columns:1fr;
+    gap:var(--space-4, 1.5rem);
+}
+
+.grid, #karya ul, .karya ul {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4, 1.5rem);
+}
+
+img { 
+  max-width: 100%; 
+  height: auto; 
+}
+
+table { 
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+p { 
+  font-size: 1rem; 
+  line-height: 1.6; 
+}
+
+@media (min-width: 48rem) {
+  .grid, #karya ul, .karya ul { 
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+@media (min-width: 60rem) {
+  .grid, #karya ul, .karya ul { 
+    grid-template-columns: repeat(3, 1fr); 
+  }
+}
