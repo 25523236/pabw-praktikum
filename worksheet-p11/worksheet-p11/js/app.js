@@ -1,4 +1,4 @@
-import { state } from "./state.js";
+import { state, muat } from "./state.js";
 import { render, inisialisasiProfil } from "./dom.js";
 import { pasangPendengar } from "./events.js";
 
@@ -8,3 +8,4 @@ pasangPendengar();
 
 window.state = state;
 window.render = render;
+window.muat = muat;
