@@ -10,6 +10,7 @@ export const profil = {
 
 export const daftarProyek = [
   {
+    id: 1,
     judul: "Halaman Profil",
     tahun: 2026,
     kategori: "web",
@@ -18,12 +19,21 @@ export const daftarProyek = [
       "Halaman profil personal berbasis HTML semantik dan CSS.",
   },
   {
+    id:2,
     judul: "Katalog Produk",
     tahun: 2026,
     kategori: "data",
     selesai: false,
     deskripsi:
       "Konsep halaman katalog produk dengan struktur data JavaScript.",
+  },
+  {
+    id: 3,
+    judul: "Proyek Scholampia",
+    tahun: 2026,
+    kategori: "web",
+    selesai: false,
+    deskripsi: "Pengembangan antarmuka aplikasi pendidikan berbasis web.",
   },
 ];
 
