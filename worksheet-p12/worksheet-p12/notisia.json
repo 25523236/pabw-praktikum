@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "titulu": "Penyelesaian Lembar A",
+    "deskripsi": "Berhasil melakukan pemanggilan fetch pertama."
+  },
+  {
+    "id": 2,
+    "titulu": "Penyelesaian Lembar B",
+    "deskripsi": "Menggunakan async, await, dan blok try/catch."
+  },
+  {
+    "id": 3,
+    "titulu": "Penyelesaian Lembar C",
+    "deskripsi": "Membaca data JSON dengan benar."
+  }
+]
