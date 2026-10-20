@@ -124,3 +124,40 @@ Dokumentasi praktikum pertemuan ke-11 mengenai pemecahan struktur JavaScript men
 
 ### Catatan Penggunaan AI
 AI membantu refactoring modul JS, penyusunan `try/catch`, dan debugging `localStorage`.
+
+## Worksheet P12 — Build Tooling, npm, dan SPA Framework (Vue)
+
+### Informasi Perkakas & Lingkungan Kerja
+* **Node.js:** `v24.21.0` (LTS)
+* **npm:** `11.19.0`
+* **Build Tooling:** Vite v8.3.4
+* **Framework:** Vue.js 3 (`<script setup>`)
+  
+### Struktur Proyek
+Proyek ini memindahkan aplikasi web modular vanilla dari Pertemuan 11 ke dalam arsitektur komponen Vue berbasis Vite:
+* `index.html` — Titik masuk utama aplikasi (AcroForm/Single Page App)
+* `src/main.js` — Mengimpor seluruh gaya global (P04–P06) dan melakukan *mount* aplikasi
+* `src/App.vue` — Komponen induk yang mengelola state reaktif dan *lifecycle* (`onMounted`, `watch`)
+* `src/components/` — Terbagi menjadi 4 komponen modular:
+  * `KepalaProfil.vue` (Menerima data via `props`)
+  * `TombolFilter.vue`
+  * `DaftarProyek.vue`
+  * `FormKontak.vue`
+* `src/state.js` & `src/simpanan.js` — Manajemen state reaktif (`reactive()`) dan sinkronisasi `localStorage`
+
+### Hasil Ukuran Build Produksi (`npm run build`)
+
+Diukur melalui DevTools Network pada port `5173` (dev) dan `4173` (preview):
+
+| Parameter | Sebelum Build (`npm run dev`) | Sesudah Build (`npm run preview`) |
+| :--- | :--- | :--- |
+| **Ukuran Total Transfer** | **1.6 MB** | **93.6 KB** |
+| **Jumlah Permintaan File** | **25 berkas** | **5 berkas** |
+
+### Deklarasi Penggunaan AI
+* **Bagian yang dibantu AI:**
+  * Penjelasan penyusunan arsitektur reaktif Vue (`reactive()`, `watch`, `onMounted`).
+* **Bagian yang dikerjakan sendiri:**
+  * Pemisahan struktur komponen `.vue` dari kode HTML/CSS Pertemuan 11.
+  * Eksekusi perintah CLI (`npm create vite`, `npm run build`, `npm run preview`).
+  * Pengujian reaktivitas `localStorage` dan perbandingan DevTools.
